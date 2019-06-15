@@ -1,0 +1,7 @@
+{
+  "name": "HackathonMoniltyChallenge",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
