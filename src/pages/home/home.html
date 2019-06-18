@@ -1,18 +1,32 @@
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
+      <ion-icon style="color: #ffffff;" name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title style="color: #ffffff;">
+      Navigation
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+<ion-content>
+  <div style="background: #ffffff">
+      <ion-searchbar placeholder="From" [(ngModel)]="from" style="padding-top: 15px!important;margin-top: 0px!important;"></ion-searchbar>
+      <ion-searchbar placeholder="To" [(ngModel)]="to"></ion-searchbar>
+      <button ion-button class="button-large" (click)="calulcateCommuting()">Submit</button>
+      <div style="height: 30px;"></div>
+  </div>
+  <h2 style="text-align:center; margin-top: 30px;">History</h2>
+  <ion-list>
+    <button ion-item (click)="openHistory(history)" *ngFor="let history of historyList" style="background: #f7f7f7f7;">
+      <ion-label style="text-align: center;">
+        {{history.from}}
+        <ion-icon name="arrow-dropright"></ion-icon>
+        {{history.to}}
+      </ion-label>
+    </button>
+  </ion-list>
 </ion-content>
+<ion-footer>
+    <img src="assets/imgs/logo.png">
+</ion-footer>

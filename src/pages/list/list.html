@@ -3,21 +3,89 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>List</ion-title>
+    <ion-title>Zürich, Coach Park <ion-icon name="arrow-dropright"></ion-icon> Zürich, Teifenbrunnen
+
+
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-end>
-        {{item.note}}
-      </div>
-    </button>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="9">
+            <span style="font-weight: bold;">8:39 AM - 9:23 AM</span><br>
+            <span>
+              <ion-icon name="time"></ion-icon><span style="color: #37AA1C">00:44</span>
+            </span>
+          </ion-col>
+          <ion-col size="3">
+            <button ion-button style="float: right;">€3.97</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="9">
+            <span style="font-weight: bold;">9:37 AM - 9:25 AM</span><br>
+            <span>
+              <ion-icon name="time"></ion-icon><span style="color: rgb(231, 73, 0)">00:48</span>
+            </span>
+          </ion-col>
+          <ion-col size="3">
+            <button ion-button style="float: right;">€3.97</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="9">
+            <span style="font-weight: bold;">10:35 AM - 9:26 AM</span><br>
+            <span>
+              <ion-icon name="time"></ion-icon><span style="color: rgb(253, 207, 4)">00:51</span>
+            </span>
+          </ion-col>
+          <ion-col size="3">
+            <button ion-button style="float: right;">€3.97</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="9">
+            <span style="font-weight: bold;">11:39 AM - 9:24 AM</span><br>
+            <span>
+              <ion-icon name="time"></ion-icon><span style="color: #37AA1C">00:45</span>
+            </span>
+          </ion-col>
+          <ion-col size="3">
+            <button ion-button style="float: right;">€3.97</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="9">
+            <span style="font-weight: bold;">12:41 AM - 9:23 AM</span><br>
+            <span>
+              <ion-icon name="time"></ion-icon><span style="color: rgb(24, 116, 3)">00:42</span>
+            </span>
+          </ion-col>
+          <ion-col size="3">
+            <button ion-button style="float: right;">€3.97</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
   </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
 </ion-content>
